@@ -2,7 +2,8 @@ async function gerarFakeUser() {
   var inputRadio = document.getElementsByTagName("input");
   // var fakeuser = document.querySelector(".fakeuser");
   var allFakeUsers = document.querySelector(".allFakeUsers");
-  var inputSelect = document.querySelector("select");
+  var inputQt = document.querySelector("#qt");
+  var inputNat = document.querySelector("#nat");
   var gender = "";
 
   for (i = 0; i < inputRadio.length; i++) {
@@ -13,9 +14,11 @@ async function gerarFakeUser() {
 
   var resposta = await fetch(
     "https://randomuser.me/api/?results=" +
-      inputSelect.value +
+      inputQt.value +
       "&gender=" +
-      gender
+      gender +
+      "&nat=" +
+      inputNat.value
   );
 
   var dados = await resposta.json();
@@ -42,7 +45,8 @@ async function gerarFakeUser() {
         }</span></p>
         <p><b>Email:</b> <span>${user.email}</span></p>
         <p><b>Nascimento:</b> <span>${user.dob.age}</span></p>
-        <p><b>Endereço:</b> <span>${user.location.city}</span></p>
+        <p><b>Cidade:</b> <span>${user.location.city}</span></p>
+        <p><b>Estado:</b> <span>${user.location.state}</span></p>
         <p><b>Telefone:</b> <span>${user.phone}</span></p>
       </div>
     `;

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,13 +10,21 @@
     <h1>Gerador de Fakeusers</h1>
     <div class="formFakeUser">
       <div>
+        <span style="color: rgb(209, 23, 23)">Gênero</span>
         <input type="radio" name="genero" id="radio" checked value="" />
         Aleatório
         <input type="radio" name="genero" id="radio" value="male" /> Homem
         <input type="radio" name="genero" id="radio" value="female" /> Mulher
       </div>
-      Quantidade:
-      <select id="">
+      <span style="color: rgb(209, 23, 23)">Nacionalidade:</span>
+      <select id="nat">
+        <option value="br">Brazil</option>
+        <option value="es">Espanha</option>
+        <option value="fr">França</option>
+        <option value="us">Estados Unidos</option>
+      </select>
+      <span style="color: rgb(209, 23, 23)">Quantidade:</span>
+      <select id="qt">
         <option value="1">1</option>
         <option value="2">2</option>
         <option value="3">3</option>
